@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: discord-bypass-bot
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: COOLDOWN
+        value: 5
+      - key: TIMEOUT
+        value: 45000
